@@ -4,7 +4,7 @@ ArtistX is a music discovery app that allows you to search for similar artists, 
 
 ## Live app
 
-https://sean-mcinturff.github.io/API-Capstone/
+https://sean-mcinturff.github.io/ArtistX/
 
 # Screenshots
 
