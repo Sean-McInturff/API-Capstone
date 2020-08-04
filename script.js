@@ -2,7 +2,8 @@
 
 const proxy = 'https://cors-anywhere.herokuapp.com/'
 const tasteDiveurl = 'https://tastedive.com/api/similar?q='
-const apiKey = '380351-ArtistX-HW29MYV0' 
+const apiKey = '380351-ArtistX-HW29MYV0'
+
 
 //fetch info from API
 function getArtists(params) {
@@ -26,14 +27,11 @@ function getArtists(params) {
     })
 }
 
-//Display results to the DOM
-function displayResults(responseJson) {
-  console.log(responseJson)
-     $('.search-results-name').empty()
-     $('.search-results').empty() 
-          $('.search-results-name').append(
-        `<h3> artists/bands similar to ${responseJson.Similar.Info[0].Name}</h3> <br>`)
-      for (let i = 0; i < responseJson.Similar.Results.length; i++) {
+function results(responseJson) {
+  $('.search-results-name').append(
+        `<h2> Artists/bands similar to ${responseJson.Similar.Info[0].Name}</h2> <br>`)
+      for (let i = 0; i < responseJson.Similar.Results.length; i++){
+      if (responseJson.Similar.Results[i].yUrl !== null) {
         $('.search-results').append(
           `<li class = "results-item">
           <h2> ${responseJson.Similar.Results[i].Name} </h2>
@@ -42,8 +40,24 @@ function displayResults(responseJson) {
           </li>
           `
         )}
+      }
+}
+
+
+//Display results to the DOM
+function displayResults(responseJson) {
+  console.log(responseJson)
+     $('.search-results-name').empty()
+     $('.search-results').empty() 
+          if (responseJson.Similar.Results < 1) {
+            $('.search-results').append(
+              `<h3> No results found for ${responseJson.Similar.Info[0].Name} :( </h3>`
+            )
+          }
+        results(responseJson)
     $('.container').removeClass('hidden')
 }
+
 
 
 //Gather info from form

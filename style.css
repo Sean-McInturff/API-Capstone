@@ -1,3 +1,7 @@
+body{
+background-color: #001524 ;
+}
+
 .container{
     text-align:center;
     display:flex;
@@ -7,20 +11,80 @@
   
   .container{
     padding: 15px;
+    margin: 0 auto;
   }
   
   .results-item{
+    padding: 15px;
     border-radius: 25px;
     border: 2px solid; 
-    width: 75%;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+    width: 100%;
+    box-shadow: 5px 2.5px 2.5px #708090;
     margin: 10px;
+    font-size: 17px;
+    background-color: #15616D;
+    color: whitesmoke;
+     font-family:'Oswald', sans-serif;
+  }
+
+  .content h2{
+    color:#FF7D00;
+    font-family: 'Rowdies', cursive;
   }
 
   header h1{
     font-size: 52px;
     text-align: center;
     margin: 0;
+    color:#FF7D00;
+    font-family: 'Rowdies', cursive;
+  }
+
+  header h2{
+    color: whitesmoke;
+    font-family: 'Rowdies', cursive;
+    text-align: center;
+  }
+
+  h3{
+    color: whitesmoke;
+    font-family: 'Rowdies', cursive;
+    text-align: center;
+  }
+
+  form{
+    font-size: 20px;
+    color:whitesmoke ;
+    font-family:'Oswald', sans-serif;
+    border:none;
+    border-bottom:2px solid #FF7D00;
+  }
+
+  form input{
+    border:none;
+    background-color:#001524;
+    color:whitesmoke;
+    text-align: center;
+    font-family: 'oswald', sans-serif;
+    font-size: 17px;
+    font-weight:bold;
+  }
+
+  input:focus, textarea:focus, select:focus{
+        outline: none;
+  }
+
+ form button{
+   background-color: #001524;
+   border:none;
+   color:whitesmoke;
+  font-family:'oswald', sans-serif;
+  font-size:17px;
+  }
+
+  footer{
+    color:whitesmoke;
+     font-family:'Oswald', sans-serif;
   }
 
   .hidden{
@@ -36,4 +100,18 @@ iframe {
     height: 424px;
     max-width: 75%;
     max-height: calc((100vw - 40px) / (16/9));
+}
+
+@media screen and (min-width: 800px){
+  .container{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .results-item{
+    width: 75%;
+    font-size: 20px;
+  }
 }
