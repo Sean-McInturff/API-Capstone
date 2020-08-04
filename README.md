@@ -1,6 +1,6 @@
 # ArtistX
 
-ArtistX is a music discovery app that allows you to search for similar artists, read about them and listen to a song of thiers.
+ArtistX is a music discovery app that allows you to search for similar artists, read about them and listen to a song of thiers all on one page.
 
 ## Live app
 
