@@ -1,5 +1,6 @@
 'use strict';
 
+//urls to be called using 'fetch'
 const proxy = 'https://cors-anywhere.herokuapp.com/'
 const tasteDiveurl = 'https://tastedive.com/api/similar?q='
 const apiKey = '380351-ArtistX-HW29MYV0'
@@ -8,8 +9,6 @@ const apiKey = '380351-ArtistX-HW29MYV0'
 //fetch info from API
 function getArtists(params) {
   const completeURL = proxy + tasteDiveurl + params + '&verbose=1'+'&k='+ apiKey
-  
-  console.log(completeURL)
 
   fetch(completeURL)
     .then(response => {
@@ -27,6 +26,7 @@ function getArtists(params) {
     })
 }
 
+//template for results list
 function results(responseJson) {
   $('.search-results-name').append(
         `<h2> Artists/bands similar to ${responseJson.Similar.Info[0].Name}</h2> <br>`)
@@ -46,7 +46,6 @@ function results(responseJson) {
 
 //Display results to the DOM
 function displayResults(responseJson) {
-  console.log(responseJson)
      $('.search-results-name').empty()
      $('.search-results').empty() 
           if (responseJson.Similar.Results < 1) {

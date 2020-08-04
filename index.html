@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>ArtistX</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div class = "container">
-      <header>
-        <h1>ArtistX</h1>
-        <h2>Music discovery</h2>
-      </header>
-    </div>
+<html lang = "en">
 
-    <div class = "container ">
-      <form id = "input">
-        <label>Enter a band or artist</label> <br>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ArtistX</title>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="container">
+		<header role = "banner">
+			<h1>ArtistX</h1>
+			<h2>Music discovery</h2>
+		</header>
+	</div>
+
+	<div class="container">
+		<form id="input">
+			<label>Enter a band or artist</label> <br>
           <input type ="text" name = "artist" class = "js-artist-input" autocomplete = "off" required>
           <button type = "submit">Go!</button>
       </form>
     </div>
 
-    <div class = "container content hidden">
+    <div class = "container content hidden" role = "main">
       <div class = "search-results-name">
       </div>
         <div class="results-container"> 
